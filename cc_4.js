@@ -93,8 +93,8 @@ console.log(`${customer.name} (${customer.type}) has checked out $${finalTotal} 
 
 console.log("----------");
 
-// Step 6: Use for...in to log values of product after discounts applied. 
-console.log("First Product Inventory Review");
+// Step 6: Use for...in to log values of a product after discounts applied. 
+console.log("First Product Inventory Review:");
 let productReview = Products[0];
     for (let key in productReview) {
         console.log(`${key}: ${productReview[key]}`);
@@ -102,4 +102,13 @@ let productReview = Products[0];
 
  console.log("----------");
 
- //Step 7 
+ //Step 7: Final Inventory Update
+
+ console.log("Full Inventory List Update:");
+
+ for (let product of Products) {
+    for (let [key, value] of Object.entries(product)) {
+        console.log (`${key}: ${value}`);
+    }
+    console.log("----------");
+ }
