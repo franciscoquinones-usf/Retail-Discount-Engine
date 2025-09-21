@@ -88,6 +88,18 @@ if (customer === "Student") {
 }
 
 let finalTotal = parseFloat((cartTotal * (1-extraDiscount)).toFixed(2));
+console.log(`${customer.name} (${customer.type}) has checked out $${finalTotal} of items`);
 }
 
-// Step 6
+console.log("----------");
+
+// Step 6: Use for...in to log values of product after discounts applied. 
+console.log("First Product Inventory Review");
+let productReview = Products[0];
+    for (let key in productReview) {
+        console.log(`${key}: ${productReview[key]}`);
+    }
+
+ console.log("----------");
+
+ //Step 7 
